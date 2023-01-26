@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+img {
+  max-width: 100%;
+  padding: 10px;
+}
+.gallery {
+  max-width: 800px;
+  margin: 0 auto;
+  .container {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .item {
+      img {
+        margin: 0 auto;
+        display: block;
+        @media (min-width: 768px) {
+          display: inline;
+        }
+      }
+    }
+    .first-col {
+      flex-basis: 63%;
+      .row-1 {
+        @media (min-width: 768px) {
+          display: flex;
+        }
+      }
+    }
+    .second-col {
+      flex-basis: 36%;
+    }
+  }
+}
